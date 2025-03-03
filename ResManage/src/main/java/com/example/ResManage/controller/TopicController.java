@@ -42,9 +42,10 @@ public class TopicController {
     }
 
     @GetMapping("/{id}")
-    public Optional<TopicResponse> getTopicById(@PathVariable Long id) {
+    public TopicResponse getTopicById(@PathVariable Long id) {
         return topicService.getTopicById(id);
     }
+
 
     @DeleteMapping("/{id}")
     public void deleteTopic(@PathVariable Long id) {
